@@ -19,4 +19,5 @@ jobs:
           username: ${{ secrets.BE_FTP_USER }}
           password: ${{ secrets.BE_FTP_PASS }}
           local-dir: ./backend/
-          server-dir: /vhhuyy107.infinityfreeapp.com/
+          server-dir: /htdocs/
+          

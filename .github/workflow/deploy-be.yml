@@ -1,0 +1,22 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lấy code
+        uses: actions/checkout@v3
+
+      - name: Upload BE lên host
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.BE_FTP_HOST }}
+          username: ${{ secrets.BE_FTP_USER }}
+          password: ${{ secrets.BE_FTP_PASS }}
+          local-dir: backend
+          server-dir: /public_html/

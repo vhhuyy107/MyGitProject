@@ -18,5 +18,5 @@ jobs:
           server: ${{ secrets.FE_FTP_HOST }}
           username: ${{ secrets.FE_FTP_USER }}
           password: ${{ secrets.FE_FTP_PASS }}
-          local-dir: frontend
-          server-dir: /public_html/
+          local-dir: ./frontend/
+          server-dir: /www.vanhuymnmth.somee.com/

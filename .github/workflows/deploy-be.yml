@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Upload BE lên host
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
         with:
           server: ${{ secrets.BE_FTP_HOST }}
           username: ${{ secrets.BE_FTP_USER }}
